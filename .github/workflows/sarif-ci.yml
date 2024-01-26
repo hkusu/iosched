@@ -46,9 +46,9 @@ jobs:
           #category: "/language:${{matrix.language}}"
           category: "codeql:${{matrix.language}}"
 
-#      - uses: actions/upload-artifact@v3
-#        with:
-#          path: /home/runner/work/sarif-android-sample7/results
+      - uses: actions/upload-artifact@v3
+        with:
+          path: /home/runner/work/iosched/results
 #          #path: /home/runner/work/sarif-android-sample/results/java.sarif
 
   analyze-qodana:
