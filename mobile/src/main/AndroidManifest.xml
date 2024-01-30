@@ -41,6 +41,14 @@
             android:value="190128000" />
 
         <activity
+            android:name=".ui.MainActivity" >
+            <intent-filter>
+                <action android:name="com.google.samples.apps.iosched.STARTUP_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".ui.LauncherActivity"
             android:theme="@style/AppTheme.Launcher">
             <!-- This will have to be placed wherever the activity-alias is pointing to. -->
@@ -56,14 +64,6 @@
                     android:host="sessions" />
             </intent-filter>
          </activity>
-
-        <activity
-            android:name=".ui.MainActivity" >
-            <intent-filter>
-                <action android:name="com.google.samples.apps.iosched.STARTUP_ACTIVITY" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
         <activity
             android:name=".ui.onboarding.OnboardingActivity"
