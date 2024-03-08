@@ -1,0 +1,13 @@
+name: Matcher Test
+
+on: pull_request
+
+jobs:
+  matcher-test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: yumemi-inc/problem-matchers/kotlin-compiler@add_files
+      - run: ./gradlew assembleDebug
